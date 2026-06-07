@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Nos Casamos! - Invitación Digital</title>
+    <style>
+        /* Importar fuentes elegantes y modernas */
+        @import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:wght@300;400;600&display=swap');
+
+        /* Configuración para móviles */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #fcf9f5; /* Fondo crema romántico */
+            color: #333333;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+        }
+
+        /* Contenedor principal tipo tarjeta de móvil */
+        .wrapper {
+            width: 100%;
+            max-width: 480px; /* Tamaño estándar de pantalla móvil */
+            margin: 0 auto;
+            background: #ffffff;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
+            min-height: 100vh;
+            padding-bottom: 50px;
+        }
+
+        /* Portada / Cabecera */
+        .header {
+            padding: 60px 20px;
+            text-align: center;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.95)), url('https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');
+            background-size: cover;
+            background-position: center;
+            border-bottom: 1px solid #f0e6df;
+        }
+
+        .header h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 0.9rem;
+            color: #8c7b6e;
+            margin: 0 0 10px 0;
+        }
+
+        .nombres {
+            font-family: 'Alex Brush', cursive;
+            font-size: 3.5rem;
+            color: #b08f73;
+            margin: 0;
+            line-height: 1.1;
+        }
+
+        .fecha {
+            margin-top: 25px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            font-size: 0.95rem;
+            color: #4a4a4a;
+        }
+
+        /* Sección de la Cronología / Eventos */
+        .timeline {
+            padding: 30px 20px;
+            position: relative;
+        }
+
+        /* Línea vertical decorativa de la línea de tiempo */
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            bottom: 40px;
+            left: 35px;
+            width: 1px;
+            background-color: #d9c5b2;
+        }
+
+        .evento {
+            position: relative;
+            margin-bottom: 40px;
+            padding-left: 45px;
+            text-align: left;
+        }
+
+        /* Círculo de la línea de tiempo */
+        .evento::before {
+            content: '';
+            position: absolute;
+            left: 31px;
+            top: 5px;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background-color: #b08f73;
+            border: 2px solid #ffffff;
+            z-index: 1;
+        }
+
+        .hora {
+            font-weight: 600;
+            color: #b08f73;
+            font-size: 1.1rem;
+            margin: 0 0 5px 0;
+        }
+
+        .titulo-evento {
+            font-size: 1.2rem;
+            font-weight: 400;
+            margin: 0 0 5px 0;
+            color: #2c2c2c;
+        }
+
+        .lugar {
+            font-size: 0.95rem;
+            color: #666666;
+            margin: 0 0 2px 0;
+            line-height: 1.4;
+        }
+
+        .ciudad {
+            font-size: 0.85rem;
+            color: #999999;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 0 0 12px 0;
+        }
+
+        /* Botones optimizados para pulsar con el pulgar en el móvil */
+        .btn-como-llegar {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 20px;
+            background-color: #f5ede6;
+            color: #7a6552;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: background-color 0.2s;
+            width: 100%; /* Ocupa todo el ancho disponible en el móvil */
+            max-width: 200px;
+            text-align: center;
+        }
+
+        .btn-como-llegar:active {
+            background-color: #e6dacb; /* Efecto al pulsar en pantallas táctiles */
+        }
+
+        /* Sección final */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #faf6f0;
+            border-top: 1px solid #f0e6df;
+        }
+
+        .footer p {
+            font-size: 0.9rem;
+            color: #777;
+            line-height: 1.6;
+            margin: 0 0 15px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        
+        <header class="header">
+            <h2>¡Nos casamos!</h2>
+            <div class="nombres">Idoia & Javier</div>
+            <div class="fecha">SÁBADO, 19 DE SEPTIEMBRE</div>
+        </header>
+
+        <section class="timeline">
+
+            <div class="evento">
+                <p class="hora">12:00 h</p>
+                <h3 class="titulo-evento">La Boda Civil</h3>
+                <p class="lugar"><strong>Ayuntamiento de Miranda de Ebro</strong></p>
+                <p class="ciudad">Miranda de Ebro</p>
+                <a href="https://www.google.com/maps?client=firefox-b-d&um=1&ie=UTF-8&fb=1&gl=es&sa=X&geocode=KVFkR-G7mk8NMaTWhUZYciL0&daddr=Pl.+de+Espa%C3%B1a,+8,+09200+Miranda+de+Ebro,+Burgos" target="_blank" class="btn-como-llegar">📍 Cómo llegar</a>
+            </div>
+
+            <div class="evento">
+                <p class="hora">15:00 h</p>
+                <h3 class="titulo-evento">El Banquete</h3>
+                <p class="lugar"><strong>Restaurante Carbón</strong></p>
+                <p class="ciudad">Miranda de Ebro</p>
+                <a href="https://www.google.com/maps?client=firefox-b-d&um=1&ie=UTF-8&fb=1&gl=es&sa=X&geocode=KWMvgaIHm08NMa8uV9b7XUMp&daddr=C.+La+Estaci%C3%B3n,+80,+09200+Miranda+de+Ebro,+Burgoshttps://www.google.com/maps?client=firefox-b-d&um=1&ie=UTF-8&fb=1&gl=es&sa=X&geocode=KWMvgaIHm08NMa8uV9b7XUMp&daddr=C.+La+Estaci%C3%B3n,+80,+09200+Miranda+de+Ebro,+Burgos" target="_blank" class="btn-como-llegar">📍 Cómo llegar</a>
+            </div>
+
+            <div class="evento">
+                <p class="hora">18:00 h</p>
+                <h3 class="titulo-evento">La Fiesta</h3>
+                <p class="lugar"><strong>Donde sea</strong></p>
+                <p class="ciudad">Miranda de Ebro</p>
+                <p style="font-size: 0.9rem; color:#888; margin-top:5px;">¡Música, copas y baile hasta que el cuerpo aguante!</p>
+            </div>
+
+        </section>
+
+        <footer class="footer">
+            <p>¡Esperamos compartir este día tan especial contigo!</p>
+            <p>Por favor, confirma tu asistencia.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
